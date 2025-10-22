@@ -12,6 +12,7 @@
 	"modules-right": [
 		"cpu",
 		"memory",
+		"disk",
 		"battery",
 		"pulseaudio",
 		"clock",
@@ -79,13 +80,19 @@
 	"memory": {
 	  "format": " {used:0.1f}Gi"
 	},
+	"disk": {
+	  "interval": 30,
+	  "format": "󰋊 {percentage_used}%",
+	  "path": "/",
+	  "tooltip-format": "Used: {used} / Total: {total}\nFree: {free} ({percentage_free}%)"
+	},
 	"battery": {
 		"format": "{icon} {capacity}%",
-		"format-charging": " {capacity}%",
-		"format-plugged": " {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-plugged": "󰚥 {capacity}%",
 		"format-alt": "{icon} {time}",
-		"format-full": " {capacity}%",
-		"format-icons": ["", "", "", "", ""],
+		"format-full": "󱈑 {capacity}%",
+		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 		"states": {
 			"warning": 30,
 			"critical": 15
@@ -93,13 +100,14 @@
 			"tooltip-format": "{timeTo}, {power}W"
 	},
 	"pulseaudio": {
-	  "format": "{icon} {volume}%",
-	  "format-muted": "  muted",
+	  "format": "󰕾 {volume}%",
+	  "format-muted": "󰖁 muted",
 	  "format-icons": {
-	    "headphone": "",
-	    "default": [" ", " ", " "]
+	    "headphone": "󰋋",
+	    "default": ["󰕾"]
 	  },
-	  "on-click": "pavucontrol"
+	  "on-click": "pavucontrol",
+	  "tooltip-format": "{desc}, {volume}%"
 	},
 	"custom/sep": {
 	  "format": "|",

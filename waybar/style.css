@@ -48,6 +48,7 @@ window#waybar {
 #cpu,
 #tray,
 #memory,
+#disk,
 #window,
 #mpris {
   padding: 0.3rem 0.6rem;
@@ -80,6 +81,10 @@ window#waybar.empty #window {
 
 #memory {
   color: #cba6f7;
+}
+
+#disk {
+  color: #f9e2af;
 }
 
 #battery {
